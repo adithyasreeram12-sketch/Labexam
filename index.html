@@ -1,0 +1,210 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f0f4f8;
+            color: #333;
+        }
+
+        header {
+            background: #243b55;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #141e30;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav button {
+            background: transparent;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        nav button:hover {
+            background: #11998e;
+            border-radius: 5px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        h2 {
+            color: #243b55;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .action-button {
+            background: #11998e;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .action-button:hover {
+            background: #087f75;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #243b55;
+            color: white;
+        }
+
+        .page {
+            display: none;
+        }
+
+        #home {
+            display: block;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: #e8f5f3;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .message {
+            margin-top: 15px;
+            color: #087f75;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #243b55;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Library Management System</h1>
+    <p>Manage books and library users easily</p>
+</header>
+
+<nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('user')">User Page</button>
+    <button onclick="showPage('admin')">Admin Page</button>
+</nav>
+
+<!-- HOME PAGE -->
+<section id="home" class="page container">
+
+    <h2>Welcome to Our Library</h2>
+
+    <p>
+        The Library Management System helps users view books
+        and allows administrators to manage library records.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Total Books</h3>
+            <h2 id="totalBooks">3</h2>
+        </div>
+
+        <div class="card">
+            <h3>Library Users</h3>
+            <h2>100+</h2>
+        </div>
+
+        <div class="card">
+            <h3>Available Services</h3>
+            <h2>3</h2>
+        </div>
+    </div>
+
+    <h2>Features</h2>
+    <p>✔ View available books</p>
+    <p>✔ Submit book borrowing requests</p>
+    <p>✔ Add new books through the Admin Page</p>
+
+</section>
+
+<!-- USER PAGE -->
+<section id="user" class="page container">
+
+    <h2>User Page</h2>
+
+    <h3>Available Books</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Book Name</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+
+        <tbody id="userBookTable"></tbody>
+    </table>
+
+    <h3>Borrow a Book</h3>
+
+    <input type="text" id="username" placeholder="Enter your name">
+
+    <input type="text
+```
